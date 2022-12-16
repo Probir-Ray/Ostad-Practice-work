@@ -1,0 +1,4 @@
+-- Updating documents (update query) -
+
+
+> db.Products.update({key:"B002RL8IYK"}, {$set: {name: "Widescreen Laptop (16:10)", star: 4.45, stock:99, price: 99.99}})

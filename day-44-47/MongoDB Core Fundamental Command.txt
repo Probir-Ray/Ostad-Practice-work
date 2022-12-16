@@ -1,0 +1,94 @@
+db.help()
+db.stats()	-	db information
+show dbs	-	show database
+
+
+
+-- Create Database --
+-> use Countries
+-> db.cities.insert({name: "Dhaka", population: "15 Million"})
+-> db.cities.insert([{name: "Rajshahi", population: "12 Million"}, {name: "Rangpur", population: "7 Million"},{name: "Dinajpur", population: "6.23 Million"}])
+
+
+Terminal Clean: "Ctrl + L"
+
+
+-- Drop Database --
+-> show dbs
+-> use local
+-> db.dropDatabase()
+
+
+-- Create Collection --
+-> use Countries
+-> db.createCollection("Weather")
+
+
+-- Delete Collection --
+-> use Countries
+-> db.Weather.drop()
+
+
+-- Insert a single document into a collection --
+-> use Countries
+-> db.cities.insertOne({name: "Dhaka", population: "15 Million", beforeName: "Tripura"})
+
+
+-- Insert multiple documents into a collection --
+-> use Countries
+-> db.cities.insertMany([{name: "Rajshahi", area: 4500}, {division: "Chittagong", nearCity: "Barisal"},{established: 1760, yearOfDistrict: 1950}])
+
+
+-- Returns a single document from a collection that satisfies the specific condition --
+-> use Countries
+-> db.cities.findOne({name: "Rajshahi"})
+
+
+-- Returns all document from a collection --
+-> db.cities.find()
+-> db.cities.find().pretty()
+
+
+-- MongoDB Projection --
+-> use Countries
+-> db.cities.find({}, {name: 1, population: 1})
+-> db.cities.find({}, {name: 1, _id: 0})
+
+
+-- Query Operators --
+-> use Countries
+-> db.Products.find({price: {$eq: 68.36}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$lt: 50}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$lte: 50}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$gt: 50}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$gte: 50}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$ne: 799.99}}, {name: 1, _id:0, price:1})
+-> db.Products.find({price: {$in: [199, 499, 899.99, 799.99]}}, {_id:0, name: 1, price: 1})
+-> db.Products.find({price: {$nin: [199, 499, 899.99, 799.99]}}, {_id:0, name: 1, price: 1, shipping: 1})
+
+
+-- Logical Operators --
+-> db.Products.find({$and: [{price: {$lte: 50}}, {stock: {$gt: 40}}]}, {_id:0, price:1, name:1, shipping:1})
+-> db.Products.find({$or: [{price: {$lte: 50}}, {stock: {$gt: 40}}]}, {_id:0, price:1, name:1, shipping:1})
+
+
+-- Limit Records --
+-> db.Products.find().limit(3).pretty()
+
+
+-- Sort Records --
+-> db.Products.find({}, {price:1}).sort({price:-1}).limit(4).pretty()		// Descending order
+-> db.Products.find({}, {price:1}).sort({price:1}).limit(5).pretty()		// Ascending order
+
+
+-- Updating documents -
+-> db.Products.update({key:"B002RL8IYK"}, {$set: {name: "Widescreen Laptop (16:10)", star: 4.45, stock:99, price: 99.99}})
+
+-> db.Products.updateOne({key:"B01LZ2WZGH"}, {$set: {name: "Laptop backpack for DSLR", star: 4, stock:50, price: 399.99}})
+
+
+-- Delete Document --
+-> db.Products.remove({key: "B002RL8IYK"})
+-> db.Products.remove({seller: "Asus"})
+
+

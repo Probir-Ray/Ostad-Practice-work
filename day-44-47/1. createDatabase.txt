@@ -1,0 +1,10 @@
+-- Create Database --
+
+> db.help()
+> db.stats()
+> show dbs
+
+> use Countries
+> db.cities.insert({name: "Dhaka", population: "15 Million"})
+
+> db.cities.insert([{name: "Rajshahi", population: "12 Million"}, {name: "Rangpur", population: "7 Million"},{name: "Dinajpur", population: "6.23 Million"}])

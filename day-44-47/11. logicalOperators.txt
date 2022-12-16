@@ -1,0 +1,4 @@
+-- Logical Operators --
+
+> db.Products.find({$and: [{price: {$lte: 50}}, {stock: {$gt: 40}}]}, {_id:0, price:1, name:1, shipping:1})
+> db.Products.find({$or: [{price: {$lte: 50}}, {stock: {$gt: 40}}]}, {_id:0, price:1, name:1, shipping:1})

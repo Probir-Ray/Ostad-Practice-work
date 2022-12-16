@@ -1,0 +1,4 @@
+-- Create Collection --
+
+> use Countries
+> db.createCollection("Weather")

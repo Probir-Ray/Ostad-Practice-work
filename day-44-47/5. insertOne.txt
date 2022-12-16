@@ -1,0 +1,4 @@
+-- Insert a single document into a collection --
+
+> use Countries
+> db.cities.insertOne({name: "Dhaka", population: "15 Million", established: "1645"})

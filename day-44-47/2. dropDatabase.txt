@@ -1,0 +1,10 @@
+-- Drop Database --
+
+> show dbs
+> use local
+> db.dropDatabase()
+
+
+> show dbs
+> use config
+> db.dropDatabase()

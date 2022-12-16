@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "6378b780dfdfd3faae298e9b"
+  },
+  "UserName": "joe_president",
+  "ListTitle": "CSS3 Learning",
+  "ListDescription": "Tags: Transition, Scale, Rotate, Transform, margin, padding, text-transform",
+  "ListStatus": "New",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668855680821"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668858293902"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6378bdedb540822406714719"
+  },
+  "UserName": "joe_president",
+  "ListTitle": "OOP Learning",
+  "ListDescription": "OOP, Class, Inheritance, Polymorpism, Object",
+  "ListStatus": "New",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668857325603"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668858138853"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6378c4cfccf205192dab6f25"
+  },
+  "UserName": "jackson234",
+  "ListTitle": "NodeJs",
+  "ListDescription": "Event Loop",
+  "ListStatus": "Complete",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668859087270"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668873996479"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6378c805e7ace75352af0d97"
+  },
+  "UserName": "jackson234",
+  "ListTitle": "ExpressJs",
+  "ListDescription": "Express, Middleware",
+  "ListStatus": "Complete",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668859909016"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668859965852"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6378f3df211a27e747d8d3e6"
+  },
+  "UserName": "jackson234",
+  "ListTitle": "ExpressJs",
+  "ListDescription": "NodeJs, Express, Middleware",
+  "ListStatus": "Cancel",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668871135070"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668872987838"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "6378feb6783529d64c9a7f3e"
+  },
+  "UserName": "jackson234",
+  "ListTitle": "MongoDB",
+  "ListDescription": "MongoDB Database, Core MongoDB, MongoDB Aggregations",
+  "ListStatus": "New",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668873910084"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1668873910084"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "637b8dec02a12e2d68fd5e4c"
+  },
+  "UserName": "rio",
+  "ListTitle": "Mongoose",
+  "ListDescription": "Mongoose",
+  "ListStatus": "Complete",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668696044323"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1669041644323"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "637b8e1302a12e2d68fd5e4e"
+  },
+  "UserName": "rio",
+  "ListTitle": "Expressjs",
+  "ListDescription": "MongoDB & Expressjs",
+  "ListStatus": "New",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668609683171"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1669041683171"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "637b8e9a02a12e2d68fd5e54"
+  },
+  "UserName": "rio",
+  "ListTitle": "Helmet Middleware",
+  "ListDescription": "Middleware",
+  "ListStatus": "Complete",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668696218629"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1669041818629"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "637b8e9f02a12e2d68fd5e56"
+  },
+  "UserName": "rio",
+  "ListTitle": "Middleware",
+  "ListDescription": "Middleware",
+  "ListStatus": "Complete",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668696223510"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1669041823510"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "637b8eb302a12e2d68fd5e58"
+  },
+  "UserName": "rio",
+  "ListTitle": "Response & Request",
+  "ListDescription": "ExpressJs",
+  "ListStatus": "Cancel",
+  "ListCreatedDate": {
+    "$date": {
+      "$numberLong": "1668869043674"
+    }
+  },
+  "ListUpdatedDate": {
+    "$date": {
+      "$numberLong": "1669041843674"
+    }
+  }
+}]

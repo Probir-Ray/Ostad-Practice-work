@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "3868e0d7-b3c9-4bfe-9018-bc73d3220e88",
+		"name": "Todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23362581"
+	},
+	"item": [
+		{
+			"name": "Login Registration",
+			"item": [
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"shree_krishna\",\r\n    \"Password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UserLogin",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UserLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Shree\",\r\n    \"LastName\": \"Krishna\",\r\n    \"EmailAddress\": \"shree_krishna234@gmail.com\",\r\n    \"MobileNumber\": \"+8801740991357\",\r\n    \"City\": \"Rangpur\",\r\n    \"UserName\": \"shree_krishna\",\r\n    \"Password\": \"123@456\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CreateProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CreateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "SelectProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SelectProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"SHREE\",\r\n    \"LastName\": \"KRISHNA\",\r\n    \"EmailAddress\": \"shree_krishna@gmail.com\",\r\n    \"MobileNumber\": \"+8801915233333\",\r\n    \"City\": \"Nagon\",\r\n    \"Password\": \"123456\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Todo List",
+			"item": [
+				{
+					"name": "CreateTodo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TodoSubject\": \"Expressjs\",\r\n    \"TodoDescription\": \"Tag Name: Expressjs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CreateTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CreateTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectTodo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/SelectTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTodo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TodoSubject\": \"Express with Nodejs\",\r\n    \"TodoDescription\": \"Nodejs & Expressjs\",\r\n    \"_id\": \"637723fca5a5014b5f2b8758\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStatusTodo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"6377286908aaf934353eb773\",\r\n    \"TodoStatus\": \"Complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateStatusTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateStatusTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTodo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"637723fca5a5014b5f2b8758\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/DeleteTodo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"DeleteTodo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectTodoByStatus",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TodoStatus\": \"Complete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SelectTodoByStatus",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectTodoByStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SelectTodoByDate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\": \"2022-11-16\",\r\n    \"ToDate\": \"2022-11-17\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SelectTodoByDate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectTodoByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5050/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njg4Mzg2ODAsImRhdGEiOnsiX2lkIjoiNjM3NmRiMGZhOTU3OTJiMDI1OGQ4NzM4IiwiRW1haWxBZGRyZXNzIjoic2hyZWVfa3Jpc2huYUBnbWFpbC5jb20iLCJNb2JpbGVOdW1iZXIiOiIrODgwMTcxNTQzMzUyMzMzMzMiLCJVc2VyTmFtZSI6InNocmVlX2tyaXNobmEifSwiaWF0IjoxNjY4NzUyMjgwfQ.nowLcZW2AbuGD0Un03C46feUQMA5WcKaB0_EnFva2uo",
+			"type": "string"
+		}
+	]
+}

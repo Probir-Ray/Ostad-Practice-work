@@ -1,0 +1,446 @@
+{
+	"info": {
+		"_postman_id": "98d09bdc-676f-41f7-b55d-8ff8319d8224",
+		"name": "Backend-rest-api-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23362581"
+	},
+	"item": [
+		{
+			"name": "Login & Registration",
+			"item": [
+				{
+					"name": "CreateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Rio\",\r\n    \"LastName\": \"Real\",\r\n    \"MobileNumber\": \"+8801745113374\",\r\n    \"EmailAddress\": \"rio_brazil@gmail.com\",\r\n    \"UserName\": \"rio\",\r\n    \"Password\": \"rio123456\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CreateProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CreateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\": \"rio\",\r\n    \"Password\": \"rio123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/LoginProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"LoginProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "SelectProfile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/SelectProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SelectProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateProfile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FirstName\": \"Joe\",\r\n    \"MobileNumber\": \"+8801945993222\",\r\n    \"EmailAddress\": \"joe_white_house@gmail.com\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateProfile",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Managing List",
+			"item": [
+				{
+					"name": "CreateList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ListTitle\": \"Response & Request\",\r\n    \"ListDescription\": \"ExpressJs\",\r\n    \"ListStatus\": \"CanceL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/CreateList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"CreateList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"6378f3df211a27e747d8d3e6\",\r\n    \"ListTitle\": \"ExpressJs\",\r\n    \"ListDescription\": \"NodeJs, Express, Middleware\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateStatusList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"637b8e3702a12e2d68fd5e50\",\r\n    \"ListStatus\": \"NeW\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/UpdateStatusList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"UpdateStatusList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"637b8e3702a12e2d68fd5e50\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/DeleteList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"DeleteList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/ReadList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"ReadList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SingleList",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"637b8e9f02a12e2d68fd5e56\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SingleList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SingleList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"search\": \"Middleware\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/SearchList",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"SearchList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterListByStatus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"COMplete\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/FilterListByStatus",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"FilterListByStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FilterListByDate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token-key",
+								"value": "{{Token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"FromDate\": \"2022-11-16\",\r\n    \"ToDate\": \"2022-11-20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/FilterListByDate",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"FilterListByDate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3030/api/v2",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjkxMjc2MjUsImRhdGEiOnsiX2lkIjoiNjM3YjhjM2EwMmExMmUyZDY4ZmQ1ZTQ2IiwiRmlyc3ROYW1lIjoiUmlvIiwiTGFzdE5hbWUiOiJSZWFsIiwiTW9iaWxlTnVtYmVyIjoiKzg4MDE3NDUxMTMzNzQiLCJFbWFpbEFkZHJlc3MiOiJyaW9fYnJhemlsQGdtYWlsLmNvbSIsIkpvaW5pbmciOiIyMDIyLTExLTIxVDE0OjMzOjMwLjEyOFoiLCJVc2VyTmFtZSI6InJpbyIsIlBhc3N3b3JkIjoicmlvMTIzNDU2In0sImlhdCI6MTY2OTA0MTIyNX0.UX8XdaYyqHUM-Lai2Goh0aFZuWUQDyFVoGCSrntCuvo",
+			"type": "string"
+		}
+	]
+}

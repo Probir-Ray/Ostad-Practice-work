@@ -1,0 +1,7 @@
+-- Sort Records --
+
+// Descending order
+> db.Products.find({}, {price:1}).sort({price:-1}).limit(4).pretty()
+
+// Ascending order	
+> db.Products.find({}, {price:1}).sort({price:1}).limit(5).pretty()		

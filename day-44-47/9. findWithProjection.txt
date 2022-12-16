@@ -1,0 +1,6 @@
+-- Find with Projection --
+
+> use Countries
+> db.cities.find({}, {name: 1, population: 1})
+> db.cities.find({}, {name: 1, _id: 0})
+

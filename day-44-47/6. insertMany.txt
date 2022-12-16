@@ -1,0 +1,4 @@
+-- Insert multiple documents into a collection --
+
+> use Countries
+> db.cities.insertMany([{name: "Rajshahi", area: 4500}, {division: "Chittagong", nearCity: "Barisal"}, {established: 1760, yearOfDistrict: 1950}])

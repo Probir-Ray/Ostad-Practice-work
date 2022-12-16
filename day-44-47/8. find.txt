@@ -1,0 +1,5 @@
+-- Returns all document from a collection --
+
+> db.cities.find()
+> db.cities.find().pretty()
+> db.cities.find({name: "Dhaka"}).pretty()

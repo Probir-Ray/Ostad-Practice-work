@@ -1,0 +1,11 @@
+-- Query Operators --
+
+> use Countries
+> db.Products.find({price: {$eq: 68.36}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$lt: 50}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$lte: 50}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$gt: 50}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$gte: 50}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$ne: 799.99}}, {name: 1, _id:0, price:1})
+> db.Products.find({price: {$in: [199, 499, 899.99, 799.99]}}, {_id:0, name: 1, price: 1})
+> db.Products.find({price: {$nin: [199, 499, 899.99, 799.99]}}, {_id:0, name: 1, price: 1, shipping: 1})

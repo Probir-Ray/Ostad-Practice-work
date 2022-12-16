@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "9c177194-9b4b-486e-b8a2-12434b588684",
+		"name": "EmployeeListAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23362581"
+	},
+	"item": [
+		{
+			"name": "InsertEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"Govinda Gopala\",\r\n  \"ID\": 12,\r\n  \"Mobile\": \"01849223341\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/create",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}",
+					"host": [
+						"{{BASE_URL}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SingleEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/636a7d337816775051a26b2f",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"636a7d337816775051a26b2f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Name\": \"Govinda Gopala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/636a7d337816775051a26b2f",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"636a7d337816775051a26b2f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/636a7d337816775051a26b2f",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"636a7d337816775051a26b2f"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "localhost:5000/v1/employee",
+			"type": "string"
+		}
+	]
+}

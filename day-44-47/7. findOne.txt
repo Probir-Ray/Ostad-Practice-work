@@ -1,0 +1,5 @@
+-- Returns a single document from a collection that satisfies the specific condition --
+
+> use Countries
+> db.cities.findOne({name: "Rajshahi"})
+

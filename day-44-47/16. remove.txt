@@ -1,0 +1,4 @@
+-- Delete Document (remove query) --
+
+> db.Products.remove({key: "B002RL8IYK"})
+> db.Products.remove({seller: "Asus"})

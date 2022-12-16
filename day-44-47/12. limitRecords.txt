@@ -1,0 +1,5 @@
+-- Limit Records --
+
+
+> db.Products.find().limit(3).pretty()
+> db.Products.find().limit(13).pretty()
