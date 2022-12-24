@@ -103,7 +103,7 @@ function CreateCollection(mngClient) {
   });
 }
 
-// Delete Collection
+// Delete Collection::
 function DeleteCollection(mngClient) {
   const myCollection = mngClient.db("countries");
   myCollection.dropCollection("megaCities", (err, result) => {

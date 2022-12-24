@@ -150,7 +150,7 @@ function createMyCollection(mngClient) {
   });
 }
 
-// Delete Collection
+// Delete Collection::
 function DropMyCollection(mngClient) {
   const myDb = mngClient.db("employee");
   myDb.dropCollection("admin_section", (err, result) => {

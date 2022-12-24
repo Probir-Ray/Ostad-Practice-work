@@ -119,7 +119,7 @@ function createCollection(mngClient) {
   });
 }
 
-// Drop Collection
+// Drop Collection::
 function DropCollection(mngClient) {
   const myDb = mngClient.db("school");
   myDb.dropCollection("inventory", (err, result) => {

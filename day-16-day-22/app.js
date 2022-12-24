@@ -149,7 +149,7 @@ function CreateCollection(myMongoClient) {
   });
 }
 
-// Drop Collection
+// Delete Collection
 function DeleteCollection(myMongoClient) {
   const myDb = myMongoClient.db("inventory");
   myDb.dropCollection("HBC", (err, result) => {

@@ -90,7 +90,7 @@ function findWithLimit(mngClient) {
     });
 }
 
-// Find with sort
+// Find with sort::
 function findWithSort(mngClient) {
   const myCollection = mngClient.db("school").collection("student");
   myCollection
